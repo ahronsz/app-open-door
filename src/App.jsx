@@ -22,6 +22,8 @@ const App = () => {
             const data = await response.json();
             if (data.success) {
                 setMessage('¡Puerta abierta con éxito!');
+            } else if(data.message === 'código invalido') {
+                setMessage('Código invalido.');
             } else {
                 setMessage(data.error || 'Ocurrió un error.');
             }
@@ -51,8 +53,12 @@ const App = () => {
                                     type="number"
                                     inputMode="numeric"
                                     pattern="[0-9]*"
+                                    maxLength={6}
                                     className="form-control"
                                     required
+                                    onInput={(e) => {
+                                        e.target.value = e.target.value.slice(0, 6);
+                                    }}
                                 />
                             </div>
                             <button type="submit" className="btn custom-bt w-100 fs-4 text-white fw-bolder">
