@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
+import logo from './assets/airbnb-logo.png'
 
 const LAMBDA_API_URL = import.meta.env.VITE_LAMBDA_API_URL;
 
@@ -34,7 +35,7 @@ const App = () => {
         <div className="custom-bg d-flex flex-column justify-content-center align-items-center min-vh-100">
             <div className="container text-center mt-n3">
                 <img
-                    src="src/assets/airbnb-logo.png"
+                    src={logo}
                     alt="Logo"
                     className="img-fluid mb-4"
                     style={{ maxWidth: '250px' }}
