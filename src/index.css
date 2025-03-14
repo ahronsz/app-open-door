@@ -6,6 +6,14 @@
     background-color: #ff5a5f;
 }
 
+.custom-bt:hover {
+    background-color: #ff5a5f;
+}
+
+.custom-bt:active {
+    background-color: #ff5a5f;
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
