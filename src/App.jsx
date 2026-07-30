@@ -3,7 +3,7 @@ import './index.css';
 import logo from './assets/airbnb-logo.png';
 
 const LAMBDA_API_BASE_URL = import.meta.env.VITE_LAMBDA_API_URL;
-const DEVICE_ID = import.meta.env.DEVICE_ID;
+const DEVICE_ID = import.meta.env.VITE_DEVICE_ID;
 
 const App = () => {
     const [message, setMessage] = useState('');
